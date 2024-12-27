@@ -175,3 +175,162 @@ Request Body: { "player1Id": 1, "player2Id": 2, "gameState": "Initial state" }
 ## Error Handling
 The project includes error handling for database-related errors and general exceptions. Specific errors such as duplicate username or email are caught and handled gracefully.
 
+# Chess Game Login Page
+
+This project includes the HTML code for a login page of an online chess game. It allows users to log into the game platform by providing their email and password. The page is designed with a clean and modern layout, including responsive design features and basic navigation.
+
+## Features
+- **Login Form**: A form where users can enter their email and password.
+- **Navigation**: Links to the Home, About, and Help pages for easy site navigation.
+- **Responsive Design**: The page is designed to be responsive, making it user-friendly across devices.
+- **Styling**: Basic CSS for a sleek design with background image support and modern form elements.
+- **Footer**: Contains useful links and a call to action for users who don't have an account yet.
+
+
+## HTML Structure
+- `<header>`: Contains the site's navigation links (Home, About, Help).
+- `<nav>`: Holds a list of navigation links, which are styled to be displayed as inline items.
+- `<main>`: The main content area containing the login form, where users can input their credentials.
+- `<footer>`: Contains additional links like "Don't have an account? Register".
+
+## Code Overview
+
+### HTML Markup
+The page structure includes semantic HTML elements such as `<header>`, `<nav>`, `<main>`, and `<footer>` to ensure accessibility and SEO benefits.  
+A login form (`<form>`) with email and password input fields is created within the `<main>` content area.  
+Navigation links are placed in a simple horizontal layout in the `<header>`.
+
+### CSS Styling
+- **General Layout**: The page uses a fixed background image and centered text to create an attractive, modern look.
+- **Form Styles**: The login form is styled with padding, border-radius, and background color, making it visually distinct and user-friendly.
+- **Responsive Design**: The page adapts to different screen sizes, ensuring a consistent user experience across devices.
+
+## Example Code:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Chess Game</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            color: rgb(2, 0, 0);
+            background-image: url(bg.jpg);
+            background-size: cover;
+            background-position: center top;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+        }
+
+        header, footer {
+            background-color: #111518;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 10px 0;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: rgb(245, 242, 242);
+            font-size: 1.1rem;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .main-content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        footer form input[type="email"] {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        footer form button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .login-form {
+            max-width: 400px;
+            margin: 50px auto;
+            background: transparent;
+            padding: 20px;
+            border-radius: 8px;
+            color: rgb(244, 241, 241);
+        }
+
+        .login-form input[type="email"],
+        .login-form input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #150505;
+            border-radius: 10px;
+        }
+
+        .login-form button {
+            width: 100%;
+            padding: 10px;
+            background-color: rgb(48, 202, 5);
+            color: rgb(252, 251, 252);
+            border: none;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="help.html">Help</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="main-content">
+        <h1>Login</h1>
+        <form class="login-form">
+            <input type="email" placeholder="Email ID" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+    <div>
+        <p>Don't have an account? <a href="#">Register</a></p>
+    </div>
+
+</body>
+
+</html>
+
+
+
