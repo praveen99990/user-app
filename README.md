@@ -331,8 +331,7 @@ Navigation links are placed in a simple horizontal layout in the `<header>`.
 </body>
 
 </html>
-
-
+```
 
 # CSS Styling for Form and Page Layout
 
@@ -357,6 +356,151 @@ This CSS file provides styling for a basic webpage with a form. It includes a ba
 1. **Link the CSS to Your HTML**  
    Link the provided `style.css` file to your HTML file within the `<head>` section like this:
    ```html
-   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="style.css">``` 
+
+
+# JavaScript Validation for Form
+
+This JavaScript file contains functions to validate form inputs for both registration and login forms. It ensures that users enter valid data before the form can be submitted.
+
+## Features
+
+- **Form Validation**: Validates fields such as name, address, email, password, subject, and agreement checkbox for the registration form.
+- **Login Validation**: Validates email and password fields in the login form to ensure they meet required conditions.
+- **Error Messages**: Displays relevant error messages next to invalid form fields to guide the user.
+- **Custom Validation Logic**:
+  - Name: Must not be empty and should not contain numbers.
+  - Address: Must not be empty.
+  - Email: Must be a valid email with `@`.
+  - Password: Must be at least 8 characters long.
+  - Subject: Must not be empty (for registration).
+  - Agree: Checkbox must be checked (for registration).
+
+## Functions
+
+### `validateForm()`
+Validates the registration form:
+- Ensures the fields for name, address, email, password, subject, and agreement are properly filled in.
+- Returns `true` if all fields are valid, otherwise `false` and displays error messages.
+
+```javascript
+function validateForm() {
+    const name = document.getElementById("name").value;
+    const address = document.getElementById("address").value;
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+    const subject = document.getElementById("subject").value;
+    const agree = document.getElementById("agree").checked;
+    const nameError = document.getElementById("name-error");
+    const addressError = document.getElementById("address-error");
+    const emailError = document.getElementById("email-error");
+    const passwordError = document.getElementById("password-error");
+    const subjectError = document.getElementById("subject-error");
+    const agreeError = document.getElementById("agree-error");
+
+    nameError.textContent = "";
+    addressError.textContent = "";
+    emailError.textContent = "";
+    passwordError.textContent = "";
+    subjectError.textContent = "";
+    agreeError.textContent = "";
+
+    let isValid = true;
+
+    if (name === "" || /\d/.test(name)) {
+        nameError.textContent = "Please enter your name properly";
+        isValid = false;
+    }
+    if (address === "") {
+        addressError.textContent = "Please enter your address";
+        isValid = false;
+    }
+    if (email === "" || !email.includes("@")) {
+        emailError.textContent = "Please enter a valid email id";
+        isValid = false;
+    }
+    if (password === "" || password.length < 8) {
+        passwordError.textContent = "Please enter a password with atleast 8 characters";
+        isValid = false;
+    }
+    if (subject === "") {
+        subjectError.textContent = "Please enter your course.";
+        isValid = false;
+    }
+    if (!agree) {
+        agreeError.textContent = "Please agree to the above information";
+        isValid = false;
+    }
+
+    return isValid;
+}
+```
+
+# loginCheck Function
+
+## Description
+
+The `loginCheck()` function is used to validate the login form by checking two key fields: the email and the password.
+
+### Functionality
+
+- **Email Validation**: Ensures the email entered is in a valid format.
+- **Password Validation**: Ensures the password is at least 8 characters long.
+- **Return Values**:
+  - Returns `true` if both the email and password meet the validation criteria.
+  - Returns `false` and displays appropriate error messages if either field is invalid.
+
+## Usage
+
+```javascript
+function loginCheck() {
+    // Email and password validation logic here
+}
+```
+
+## loginCheck()
+#### Validates the login form:
+
+- *Ensures the `email` field is not empty and contains a valid `email` format.*
+
+- *Validates the `password` to ensure it is at least 8 characters long.*
+
+Returns `true` if both fields are valid, otherwise `false` and displays error messages next to the respective fields.
+
+
+
+
+
+
+   
+   ### funcion code(js):-
+```function loginCheck() {
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    const emailError = document.getElementById("email-error");
+    const passwordError = document.getElementById("password-error");
+
+    emailError.textContent = "";
+    passwordError.textContent = "";
+
+    let isValid = true;
+
+    if (email === "" || !email.includes("@")) {
+        emailError.textContent = "Provide a valid email id.";
+        isValid = false;
+    }
+
+    if (password === "" || password.length < 8) {
+        passwordError.textContent = "Enter a valid password.";
+        isValid = false;
+    }
+
+    return isValid;
+}
+```
+
+
+
 
 
