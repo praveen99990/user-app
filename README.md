@@ -334,3 +334,29 @@ Navigation links are placed in a simple horizontal layout in the `<header>`.
 
 
 
+# CSS Styling for Form and Page Layout
+
+This CSS file provides styling for a basic webpage with a form. It includes a background image, form layout, input field styling, and button customization. The form elements are responsive and visually appealing, with hover effects and error message styling.
+
+## Features
+
+- **Global Styles**: Applies background image and font settings across the page.
+- **Form Styling**: Styles a form with a background image, padding, border-radius, and box-shadow for a modern look.
+- **Input Fields**: Customizes input, select, and textarea elements for consistent styling across the form.
+- **Button Customization**: Includes submit, reset, and checkbox button styles with hover effects for interactivity.
+- **Error Message Styling**: Red-colored error messages for form validation feedback to ensure user-friendly form validation.
+
+## Key Styles
+
+- **Text Inputs**: Full-width inputs with padding, rounded borders, and consistent styling.
+- **Buttons**: A green submit button, a red reset button, and styled checkboxes with hover effects.
+- **Form Layout**: A centered form with a clean, modern design enhanced by shadow effects to stand out.
+
+## How to Use
+
+1. **Link the CSS to Your HTML**  
+   Link the provided `style.css` file to your HTML file within the `<head>` section like this:
+   ```html
+   <link rel="stylesheet" href="style.css">
+
+
