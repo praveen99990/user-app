@@ -93,11 +93,12 @@ cd user-app
 - Right-click in the Servers view and select New > Server.
 - Select the Tomcat server you configured and click Finish.
 
-## 5. Configure Database Connection
-Update the DatabaseConnection.java file with your MySQL database credentials
+### 5. Configure Database Connection
 
-```http
- package com.chessgame.util;
+Update the `DatabaseConnection.java` file with your MySQL database credentials:
+
+```java
+package com.chessgame.util;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -118,7 +119,6 @@ public class DatabaseConnection {
     }
 }
 ```
-
 
 # Requirements
 - Java Development Kit (JDK) 8 or higher
